@@ -2,8 +2,6 @@
 
 **Asignatura:** Inteligencia Artificial (Semestre 6)  
 **Institución:** Corporación de Estudios Tecnológicos del Norte del Valle (COTECNOVA)  
-**Estudiantes:** Steven Molano & Heiber  
-**Docente:** Jhon James Cano Sánchez  
 
 ---
 
