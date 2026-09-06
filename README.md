@@ -1,70 +1,76 @@
-# Repositorio de Inteligencia Artificial
+# 🤖 Repositorio Académico: Inteligencia Artificial (Semestre 6)
 
-**Asignatura:** Inteligencia Artificial (Semestre 6)  
-**Institución:** Corporación de Estudios Tecnológicos del Norte del Valle (COTECNOVA)  
-**Estudiante:** Jhon Esteban Molina Echavarria  
+**Institución:** COTECNOVA  
 **Docente:** Jhon James Cano Sánchez  
-**Repositorio Oficial:** [github.com/moliech/InteligenciaArtificial](https://github.com/moliech/InteligenciaArtificial)
+**Integrantes del Proyecto Independiente:**  
+- **Jhon Esteban Molina Echavarría**  
+- **Heiber Lozano Mercado**  
 
 ---
 
-## 📌 Entregables del Curso por Clases
+## 📌 Estructura del Repositorio
 
-### 📘 Clase 1: Introducción a la IA y Fundamentos de Python
-* **Actividad en Clase:** [`src/analisis_datos.py`](./src/analisis_datos.py) - Script básico de variables y condicionales `if/else`.
-* **Actividad Independiente:** [`investigacion_proyectos.md`](./investigacion_proyectos.md) - Investigación preliminar de 3 propuestas de proyectos de IA.
+\InteligenciaArtificial/
+├── Dockerfile                  # Entorno Docker con Python 3.12-slim
+├── docker-compose.yml          # Servicio Docker e integración de volúmenes
+├── requirements.txt            # Dependencias (numpy, pandas, matplotlib, scikit-learn, jupyter)
+├── README.md                   # Documentación principal del repositorio
+├── data/                       # Archivos de datos (.csv)
+│   ├── cultivos.csv            # Dataset de práctica en clase
+│   └── lecturas_ingles.csv     # Dataset del proyecto (Tutor de Inglés)
+├── src/                        # Scripts en Python
+│   ├── main.py                 # Script de prueba inicial (Clase 2)
+│   ├── gestion_cultivos.py     # Práctica de Listas, Diccionarios y Funciones (Clase 2)
+│   ├── analizar_cultivos.py    # Práctica de Lectura de CSV e Informes (Clase 3)
+│   ├── cargar_datos.py         # Carga inicial de datos del proyecto (Clase 2)
+│   └── analisis_proyecto.py    # Procesamiento e informe del proyecto (Clase 3)
+└── informes/                   # Informes generados automáticamente en Markdown
+    └── informe_ingles.md       # Informe de estadísticas del Tutor de Inglés
+\
+---
+
+## 💻 1. Trabajo en Clase (Actividades Guiadas)
+
+Ejercicios prácticos desarrollados durante las sesiones presenciales de la asignatura para comprender los fundamentos de Python, estructuras de datos y Docker:
+
+* **Clase 1: Configuración de Herramientas**:
+  - Configuración de WSL 2, Ubuntu, Docker Desktop y entorno de desarrollo en VS Code.
+* **Clase 2: Fundamentos de Python y Dockerization**:
+  - Creación del contenedor Docker \ia-python\ basado en \python:3.12-slim\.
+  - Script \src/gestion_cultivos.py\: Manejo de listas de diccionarios, cálculo de rendimiento de cultivos y funciones.
+* **Clase 3: Manejo de Archivos e Informes**:
+  - Lectura del archivo \data/cultivos.csv\ utilizando el módulo \csv.DictReader\.
+  - Script \src/analizar_cultivos.py\ para calcular estadísticas y generar automáticamente \informe_cultivos.md\.
 
 ---
 
-### 📙 Clase 2: Estructuras de Datos y Funciones
-* **Actividad 12 (En Clase):** [`src/gestion_cultivos.py`](./src/gestion_cultivos.py) - Ejercicio integrador con listas de diccionarios, cálculo de rendimientos y cultivo con mayor rendimiento.
-* **Actividad 13 (Independiente):** 
-  * Dataset del proyecto: [`data/lecturas_ingles.csv`](./data/lecturas_ingles.csv)
-  * Script de Carga y Resumen: [`src/cargar_datos.py`](./src/cargar_datos.py)
+## 🚀 2. Trabajo Independiente (Proyecto de IA)
+
+**Nombre del Proyecto:** Tutor Inteligente de Idiomas (Lectura y Comprensión en Inglés)  
+**Equipo de Trabajo:** Jhon Esteban Molina Echavarría & Heiber Lozano Mercado  
+
+### 🎯 Descripción del Proyecto
+Un sistema inteligente de soporte educativo diseñado para evaluar la extensión y dificultad léxica de lecturas en inglés (clasificadas en niveles A1, A2, B1, B2). El objetivo es ubicar al estudiante en el nivel de lectura óptimo y dosificar el contenido para fomentar la comprensión de ideas globales en lugar de la traducción literal.
+
+### 📅 Entregas del Proyecto Independiente
+
+* **Entrega Clase 1 - Exploración del Banco de Proyectos**:
+  - Selección e investigación del *Tutor Inteligente de Idiomas* en el documento \investigacion_proyectos.md\.
+* **Entrega Clase 2 - Carga de Datos Reales**:
+  - Definición del dataset \data/lecturas_ingles.csv\ y creación del script de lectura \src/cargar_datos.py\.
+* **Entrega Clase 3 - Procesamiento y Generación de Informe**:
+  - Script \src/analisis_proyecto.py\: Lee los datos con \csv.DictReader\, convierte valores numéricos y calcula 5 estadísticas clave (total lecturas, promedio palabras, dificultad min/max, promedio dificultad y distribución por nivel).
+  - Generación automática del informe estructurado en \informes/informe_ingles.md\.
 
 ---
 
-### 📗 Clase 3: Manejo de Archivos, Excepciones e Informes Automáticos
-* **Actividad en Clase:**
-  * Dataset CSV: [`data/cultivos.csv`](./data/cultivos.csv)
-  * Script de Procesamiento con `try-except`: [`src/analizar_cultivos.py`](./src/analizar_cultivos.py)
-  * Informe Automático Generado: [`informe_cultivos.md`](./informe_cultivos.md)
+## 🛠️ Instrucciones de Ejecución
 
----
-
-## 📂 Estructura General del Repositorio
-
-```text
-InteligenciaArtificial/
-├── .dockerignore                  # Exclusiones para construcciones de Docker
-├── .gitignore                     # Exclusiones para el control de versiones de Git
-├── Dockerfile                     # Configuración de imagen contenedora de Python
-├── docker-compose.yml             # Orquestación de servicios para el entorno
-├── README.md                      # Documentación principal del repositorio
-├── informe_cultivos.md            # Informe generado automáticamente por Clase 3
-├── investigacion_proyectos.md     # Documento de investigación de proyectos (Clase 1)
-├── requirements.txt               # Dependencias principales del proyecto
-├── data/                          # Almacenamiento de archivos de datos (CSV/JSON)
-│   ├── cultivos.csv
-│   └── lecturas_ingles.csv
-└── src/                           # Código fuente en Python
-    ├── analisis_datos.py
-    ├── analizar_cultivos.py
-    ├── cargar_datos.py
-    ├── gestion_cultivos.py
-    └── main.py
-```
-
----
-
-## 🛠️ Cómo ejecutar los scripts
-```bash
-# Ejecutar Actividad Clase 2 (Gestión de cultivos en memoria)
-python3 src/gestion_cultivos.py
-
-# Ejecutar Actividad Clase 2 (Carga de dataset de inglés)
-python3 src/cargar_datos.py
-
-# Ejecutar Actividad Clase 3 (Análisis de CSV e Informe automático en Markdown)
-python3 src/analizar_cultivos.py
-```
+1. **Levantar el contenedor de Docker**:
+   \\ash
+   docker compose up -d
+   \2. **Ejecutar el análisis del proyecto independiente**:
+   \\ash
+   python3 src/analisis_proyecto.py
+   \3. **Revisar el informe generado**:
+   Verificar la creación del archivo \informes/informe_ingles.md\.
