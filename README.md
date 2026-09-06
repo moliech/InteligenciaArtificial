@@ -4,64 +4,67 @@
 **Institución:** Corporación de Estudios Tecnológicos del Norte del Valle (COTECNOVA)  
 **Estudiante:** Jhon Esteban Molina Echavarria  
 **Docente:** Jhon James Cano Sánchez  
-**Repositorio Oficial de Referencia:** [Clase2.md (Profesor James Cano)](https://github.com/jamescanos/InteligenciaArtificial/blob/master/Clase2.md)
+**Repositorio Oficial:** [github.com/moliech/InteligenciaArtificial](https://github.com/moliech/InteligenciaArtificial)
 
 ---
 
-## 📌 Entregables de la Clase 2 (Actividades 10, 11, 12 y 13)
+## 📌 Entregables del Curso por Clases
 
-### 🔵 Actividad 10 y 11: Definición y Estructura del Proyecto Final
-
-* **Nombre del Proyecto:** Tutor Inteligente de Idiomas Interpretativo y Adaptativo (Lectura y Escritura en Inglés)
-* **Compañero de Grupo:** Heiber Lozano Mercado *(Nota: Se creará un repositorio grupal dedicado al iniciar el desarrollo del proyecto)*.
-* **Problemática:** Los estudiantes de inglés suelen traducir literalmente palabra por palabra sin comprender el sentido global del texto, o no cuentan con un plan de estudio adaptado a sus fallas frecuentes.
-* **Objetivo:** Desarrollar un sistema interactivo en Python que evalúe la comprensión lectora, determine el nivel real del estudiante (A1, A2, B1) y sugiera lecturas adaptadas a sus necesidades.
-* **Datos a utilizar:** Dataset estructurado en CSV (`data/lecturas_ingles.csv`) con lecturas en inglés, niveles de dificultad, número de palabras y categorías gramaticales.
-* **Tecnologías:** Python (Listas, Diccionarios, Funciones, Manejo de Archivos CSV y Análisis Estadístico).
-* **Documentación previa:** [`investigacion_proyectos.md`](./investigacion_proyectos.md)
+### 📘 Clase 1: Introducción a la IA y Fundamentos de Python
+* **Actividad en Clase:** [`src/analisis_datos.py`](./src/analisis_datos.py) - Script básico de variables y condicionales `if/else`.
+* **Actividad Independiente:** [`investigacion_proyectos.md`](./investigacion_proyectos.md) - Investigación preliminar de 3 propuestas de proyectos de IA.
 
 ---
 
-### 🟢 Actividad 12: Actividad en Clase (Gestión de Cultivos)
-
-* **Enunciado:** Desarrollar un programa que gestione información de cultivos en Cartago usando listas, diccionarios y funciones integradas.
-* **Archivo de código:** [`src/gestion_cultivos.py`](./src/gestion_cultivos.py)
-* **Funciones desarrolladas:**
-  1. `calcular_rendimiento(cultivo)`: Retorna la producción por hectárea.
-  2. `mostrar_cultivos(lista_cultivos)`: Imprime cada cultivo y su rendimiento formateado.
-  3. `cultivo_mayor_rendimiento(lista_cultivos)`: Determina y retorna el cultivo de mayor rendimiento.
+### 📙 Clase 2: Estructuras de Datos y Funciones
+* **Actividad 12 (En Clase):** [`src/gestion_cultivos.py`](./src/gestion_cultivos.py) - Ejercicio integrador con listas de diccionarios, cálculo de rendimientos y cultivo con mayor rendimiento.
+* **Actividad 13 (Independiente):** 
+  * Dataset del proyecto: [`data/lecturas_ingles.csv`](./data/lecturas_ingles.csv)
+  * Script de Carga y Resumen: [`src/cargar_datos.py`](./src/cargar_datos.py)
 
 ---
 
-### 🔴 Actividad 13: Actividad Independiente (Procesamiento de Datos del Proyecto)
-
-* **Enunciado:** Crear un archivo de datos real (`CSV` o `JSON`) enfocado en el proyecto final y un script `cargar_datos.py` que procese la información y muestre estadísticas clave.
-* **Archivos entregados:**
-  * **Dataset del Proyecto:** [`data/lecturas_ingles.csv`](./data/lecturas_ingles.csv)
-  * **Script de Análisis:** [`src/cargar_datos.py`](./src/cargar_datos.py)
-* **Funciones desarrolladas:**
-  1. `leer_datos(ruta_archivo)`: Carga el archivo CSV y lo convierte en una lista de diccionarios.
-  2. `mostrar_resumen(datos)`: Muestra la cantidad total de registros y tres estadísticas básicas (promedio de palabras, dificultad máxima y dificultad mínima).
+### 📗 Clase 3: Manejo de Archivos, Excepciones e Informes Automáticos
+* **Actividad en Clase:**
+  * Dataset CSV: [`data/cultivos.csv`](./data/cultivos.csv)
+  * Script de Procesamiento con `try-except`: [`src/analizar_cultivos.py`](./src/analizar_cultivos.py)
+  * Informe Automático Generado: [`informe_cultivos.md`](./informe_cultivos.md)
 
 ---
 
-## 📂 Índice General de Archivos del Repositorio
+## 📂 Estructura General del Repositorio
 
-| Clase | Archivo / Entregable | Descripción |
-| :--- | :--- | :--- |
-| **Clase 1** | [`src/analisis_datos.py`](./src/analisis_datos.py) | Script básico con variables y condicionales `if/else`. |
-| **Clase 1** | [`investigacion_proyectos.md`](./investigacion_proyectos.md) | Investigación preliminar de 3 propuestas de proyectos de IA. |
-| **Clase 2** | [`src/gestion_cultivos.py`](./src/gestion_cultivos.py) | **Actividad 12:** Ejercicio integrador con listas, diccionarios y funciones. |
-| **Clase 2** | [`data/lecturas_ingles.csv`](./data/lecturas_ingles.csv) | **Actividad 13 (Dataset):** Datos del proyecto del Tutor de Inglés. |
-| **Clase 2** | [`src/cargar_datos.py`](./src/cargar_datos.py) | **Actividad 13 (Script):** Carga y resumen estadístico del dataset. |
+```text
+InteligenciaArtificial/
+├── .dockerignore                  # Exclusiones para construcciones de Docker
+├── .gitignore                     # Exclusiones para el control de versiones de Git
+├── Dockerfile                     # Configuración de imagen contenedora de Python
+├── docker-compose.yml             # Orquestación de servicios para el entorno
+├── README.md                      # Documentación principal del repositorio
+├── informe_cultivos.md            # Informe generado automáticamente por Clase 3
+├── investigacion_proyectos.md     # Documento de investigación de proyectos (Clase 1)
+├── requirements.txt               # Dependencias principales del proyecto
+├── data/                          # Almacenamiento de archivos de datos (CSV/JSON)
+│   ├── cultivos.csv
+│   └── lecturas_ingles.csv
+└── src/                           # Código fuente en Python
+    ├── analisis_datos.py
+    ├── analizar_cultivos.py
+    ├── cargar_datos.py
+    ├── gestion_cultivos.py
+    └── main.py
+```
 
 ---
 
 ## 🛠️ Cómo ejecutar los scripts
 ```bash
-# Ejecutar Actividad 12
-python src/gestion_cultivos.py
+# Ejecutar Actividad Clase 2 (Gestión de cultivos en memoria)
+python3 src/gestion_cultivos.py
 
-# Ejecutar Actividad 13
-python src/cargar_datos.py
+# Ejecutar Actividad Clase 2 (Carga de dataset de inglés)
+python3 src/cargar_datos.py
+
+# Ejecutar Actividad Clase 3 (Análisis de CSV e Informe automático en Markdown)
+python3 src/analizar_cultivos.py
 ```
